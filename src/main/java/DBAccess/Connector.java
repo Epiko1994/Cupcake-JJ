@@ -11,7 +11,7 @@ import java.sql.SQLException;
  */
 public class Connector {
 
-    private static final String URL = "jdbc:mysql://178.128.205.150:3306/lego?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false";
+    private static final String URL = "jdbc:mysql://178.128.205.150:3306/Cupcake?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false";
     private static final String USERNAME = "testuser";
     private static final String PASSWORD = "password123";
 
