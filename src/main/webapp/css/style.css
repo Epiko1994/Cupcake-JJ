@@ -1,0 +1,41 @@
+    body{
+        margin: 20px;
+        background-color: #FFFFFF;
+    }
+
+    .my-container{
+        border: 1px solid green;
+    }
+
+    .my-row{
+        border: 1px solid red;
+    }
+
+    .my-col{
+        border: 2px dotted blue; 
+    }
+
+    #logo-main {
+    display: block;
+    margin: 8px auto;
+    display: inline-block;
+    }
+
+    #byggeknap {
+        border: none; /*rewriting standard style, it is necessary to be able to change the size*/
+        height: 20px;
+        width: 40px;
+    }
+    #banner {
+        height: 200px;
+        background-image: url("/img/cupcakebaggrund.png");
+        background-size: 300px 300px;
+    }
+
+    #navbar{
+        padding: 0;
+    }
+
+    option[value=""][disabled] {
+        display: none;
+    }
