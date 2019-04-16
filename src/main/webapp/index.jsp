@@ -17,18 +17,19 @@
     <title>Welcome page</title>
 </head>
 <body>
+<!--
 <div class="container text-center" id="banner">
     <img id="logo-main" src="img/cupcakebaggrund.png">
 </div>
 <div class="container" name="container">
-    <!--<div class="jumbotron">-->
+    <div class="jumbotron">
         <div class="row">
             <div class="col text-center">
                 </br>
                 <h1>Olsker Cupcakes ApS</h1>
             </div>
         </div>
-    <!--</div>-->
+    </div>
 </div>
 
 <div class="navbar">
@@ -54,6 +55,38 @@
         </ul>
     </nav>
 
+</div>
+-->
+
+<div class="container text-center" id="banner">
+    <img id="logo-main" src="img/logo.png" width="146">
+</div>
+<div class="container" id="navbar">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="index.jsp" class="navbar-brand"><img src="img/cupcake.svg" width="30" height="30"
+                                                      class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="index.jsp" class="nav-link ">Forside</a>
+                </li>
+                <li class="nav-item">
+                    <a href="bestil" class="nav-link">Bestil</a>
+                </li>
+
+                <form name="register" id="register_button" action="FrontController" method="GET">
+
+                    <input type="hidden" name="command" value="registerpage">
+                    <input type="submit" value="Registrer/Login">
+
+
+                </form>
+            </ul>
+        </div>
+    </nav>
 </div>
 
 <p> Hej! </p>

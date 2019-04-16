@@ -34,6 +34,20 @@
 
     }
 
+    input {
+        font-size: 12px;
+        height: 40px;
+        width: auto;
+        background-color: #ccd1d1;
+        border-radius: 0;
+        border: none;
+        opacity: 0.5;
+    }
+
+    input:hover {
+        opacity: 1;
+    }
+
     #register_button {
 
     }

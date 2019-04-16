@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Title</title>
@@ -18,10 +19,10 @@
             <form name="login" action="FrontController" method="POST">
                 <input type="hidden" name="command" value="login">
                 Email:<br>
-                <input type="text" name="email" value="someone@nowhere.com">
+                <input type="text" name="email" value="">
                 <br>
                 Password:<br>
-                <input type="password" name="password" value="sesam">
+                <input type="password" name="password" value="">
                 <br>
                 <input type="submit" value="Submit">
             </form>
@@ -31,13 +32,13 @@
             <form name="register" action="FrontController" method="POST">
                 <input type="hidden" name="command" value="register">
                 Email:<br>
-                <input type="text" name="email" value="someone@nowhere.com">
+                <input type="text" name="email" value="">
                 <br>
                 Password:<br>
-                <input type="password" name="password1" value="sesam">
+                <input type="password" name="password1" value="">
                 <br>
                 Retype Password:<br>
-                <input type="password" name="password2" value="sesam">
+                <input type="password" name="password2" value="">
                 <br>
                 <input type="submit" value="Submit">
             </form>
