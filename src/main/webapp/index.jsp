@@ -20,47 +20,27 @@
 <div class="container text-center" id="banner">
     <img id="logo-main" src="img/cupcakebaggrund.png">
 </div>
-<div class="container">
-    <div class="jumbotron">
+<div class="container" name="container">
+    <!--<div class="jumbotron">-->
         <div class="row">
             <div class="col text-center">
                 </br>
                 <h1>Olsker Cupcakes ApS</h1>
             </div>
         </div>
+    <!--</div>-->
+</div>
+
+<div class="navbar">
+
+    <a class="active" href="index.jsp"> Home </a>
+
+
+</div>
+
+<p> Hej! </p>
         
-        <table>
-            <tr><td>Login</td>
-                <td>
-                    <form name="login" action="FrontController" method="POST">
-                        <input type="hidden" name="command" value="login">
-                        Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
-                        <br>
-                        Password:<br>
-                        <input type="password" name="password" value="sesam">
-                        <br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </td>
-                <td>Or Register</td>
-                <td>
-                    <form name="register" action="FrontController" method="POST">
-                        <input type="hidden" name="command" value="register">
-                        Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
-                        <br>
-                        Password:<br>
-                        <input type="password" name="password1" value="sesam">
-                        <br>
-                        Retype Password:<br>
-                        <input type="password" name="password2" value="sesam">
-                        <br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </td>
-            </tr>
-        </table>
+
         <% String error = (String) request.getAttribute( "error");
            if ( error != null) { 
                out.println("<H2>Error!!</h2>");

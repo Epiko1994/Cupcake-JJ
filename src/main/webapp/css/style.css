@@ -27,12 +27,29 @@
         width: 40px;
     }
     #banner {
+
         height: 200px;
+        width: 1500px;
         background-image: url("/img/cupcakebaggrund.png");
-        background-size: 300px 300px;
+
     }
 
-    #navbar{
+
+    .navbar {
+
+        height: 40px;
+        width: auto;
+        background-color:  #ccd1d1;
+
+    }
+
+    p {
+        font-size: 50px;
+    }
+
+    #container
+
+    navbar{
         padding: 0;
     }
 
