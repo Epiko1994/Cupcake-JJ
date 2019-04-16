@@ -33,8 +33,26 @@
 
 <div class="navbar">
 
-    <a class="active" href="index.jsp"> Home </a>
+    <nav class="navbar navbar-default">
 
+        <a href="index.jsp" class="navbar-brand" id="home_button"><img src="img/cupcakebaggrund.png" width="30" height="30"
+                                                      class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
+
+        <ul>
+
+            <li>
+
+
+            </li>
+
+            <li id="register_button">
+
+                <a href="WEB-INF/registerpage.jsp" class="nav-link">Registrer/Login</a>
+
+            </li>
+
+        </ul>
+    </nav>
 
 </div>
 

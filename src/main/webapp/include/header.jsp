@@ -22,7 +22,8 @@
 </div>
 <div class="container" id="navbar">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="index.jsp" class="navbar-brand"><img src="img/cupcake.svg" width="30" height="30" class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
+        <a href="index.jsp" class="navbar-brand"><img src="img/cupcake.svg" width="30" height="30"
+                                                        class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
