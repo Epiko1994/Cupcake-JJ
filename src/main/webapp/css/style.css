@@ -15,6 +15,10 @@
         border: 2px dotted blue; 
     }
 
+    #kurv {
+        float: right;
+    }
+
     #logo-main {
     display: block;
     margin: 8px auto;

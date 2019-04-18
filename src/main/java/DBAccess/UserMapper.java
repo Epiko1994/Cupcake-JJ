@@ -2,6 +2,8 @@ package DBAccess;
 
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.User;
+
+import java.rmi.server.ExportException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,5 +57,15 @@ public class UserMapper {
             throw new LoginSampleException(ex.getMessage());
         }
     }
+
+    /*public static void role() throws SQLException, ClassNotFoundException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT role FROM Cupcake.Users";
+            return role;
+        } catch(Exception e) {
+
+        }
+    }*/
 
 }
