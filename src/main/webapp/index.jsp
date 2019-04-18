@@ -56,8 +56,75 @@
     </nav>
 </div>
 
-<p> Hej! </p>
-        
+<div class="row">
+    <div class="col-md-3 text-center">
+        <label>Bund:</label>
+        <select class="form-control" name="bottom">
+            <option value="0" disabled selected>Vælg bund
+                    <%
+/*
+                    List<BundCake> bundList = (List<BundCake>) request.getAttribute("cupcake");
+
+                    for (int i = 0; i < bundList.size() ; i++) {
+                        String bundOption = "";
+
+                        String printBundID = Integer.toString(bundList.get(i).getBundID());
+                        String printBundNavn = bundList.get(i).getNavnBund()+"  "+Integer.toString(bundList.get(i).getPrisBund());
+
+                        bundOption = "<option value=\"_printBundID_\">_printBundNavn_</option>";
+                        bundOption = bundOption.replace("_printBundNavn_",printBundNavn);
+                        bundOption = bundOption.replace("_printBundID_",printBundID);
+                        out.println(bundOption);
+                    }  */
+                %>
+        </select>
+    </div>
+
+    <div class="col-md-3 text-center">
+        <label>Topping:</label>
+        <select class="form-control" name="top">
+            <option value="0" disabled selected>Vælg top
+                    <%
+/*
+                    List<TopCake> topList = (List<TopCake>) request.getAttribute("toplisten");
+
+                    for (int i = 0; i < topList.size() ; i++) {
+                        String topOption = "";
+
+                        String printTopID = Integer.toString(topList.get(i).getTopID());
+                        String printTopNavn = topList.get(i).getNavnTop()+"  "+Integer.toString(topList.get(i).getPrisTop());
+                        //String printTopID = (String) request.getAttribute("topList.get(i).getTopID()");
+                        //String printTopNavn = (String) request.getAttribute("topList.get(i).getNavnTop()");
+
+
+                        topOption = "<option value=\"printTopID\">printTopNavn</option>";
+                        topOption = topOption.replace("printTopNavn",printTopNavn);
+                        topOption = topOption.replace("printTopID",printTopID);
+                        out.println(topOption);
+
+                    }   */
+                %>
+        </select>
+    </div>
+
+    <div class="col-md-3 text-center">
+        <label>Antal:</label>
+        <select class="form-control" name="number">
+            <option value="0" disabled selected>Vælg antal
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+
+
 
         <% String error = (String) request.getAttribute( "error");
            if ( error != null) { 
