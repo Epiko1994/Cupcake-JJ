@@ -53,7 +53,7 @@
             </div>
         </nav>
     </div>
-        <h1>Hello <%=request.getParameter( "email" )%> </h1>
+        <h1>Hello <%=request.getAttribute( "email" )%> </h1>
         You are now logged in as a customer of our wonderful site.
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

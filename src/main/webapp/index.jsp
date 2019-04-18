@@ -44,12 +44,24 @@
 
                 </form>
 
-                <form>
+                <%
+                    String userRole = (String)session.getAttribute("role");
+                    if (userRole == null) {
+                        userRole = "customer";
+                    }
+                    if (userRole.equals("admin") || userRole.equals("customer")) {
+
+                %>
+
+                <form name="MyPage" id="Mypage_button" action="FrontController" method="POST">
 
                     <input type="hidden" name="command" value="mypage">
+                    <input type="hidden" name="role" value="<%=userRole%>">
                     <input type="submit" value="My Page">
 
                 </form>
+
+                <% } %>
 
             </ul>
         </div>

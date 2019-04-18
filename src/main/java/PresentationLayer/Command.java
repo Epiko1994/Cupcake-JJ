@@ -14,8 +14,7 @@ abstract class Command {
         commands.put( "login", new Login() );
         commands.put( "register", new Register() );
         commands.put( "registerpage", new RegisterBuilder() );
-        commands.put( "customerpage", new MyPage() );
-        commands.put( "adminpage", new MyPage());
+        commands.put( "mypage", new MyPage() );
         commands.put( "cartpage", new Cart() );
     }
 

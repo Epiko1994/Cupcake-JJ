@@ -14,16 +14,18 @@ public class MyPage extends Command{
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
-        String email = request.getParameter( "email" );
-        String password = request.getParameter( "password" );
-        HttpSession session = request.getSession(false);
-        User user =  LogicFacade.login( email, password );
-        session.setAttribute( "user", user );
-        session.setAttribute( "role", user.getRole() );
-
-        return  user.getRole() + "page";
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("user");
+        String email = user.getEmail();
+        request.setAttribute("email", email);
+        System.out.println("Her skriver vi email ud " + email);
+        String userRole = request.getParameter("role");
+        System.out.println(userRole);
+        if (userRole.equals("admin")) {
+            return "adminpage";
+        } else {
+            return "customerpage";
+        }
     }
-
-
 
 }

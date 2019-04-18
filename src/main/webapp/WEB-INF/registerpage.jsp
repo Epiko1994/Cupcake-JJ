@@ -35,7 +35,7 @@
                     <a href="bestil" class="nav-link">Bestil</a>
                 </li>
 
-                <form name="register" id="register_button" action="FrontController" method="GET">
+                <form name="register" id="register_button" action="FrontController" method="POST">
 
                     <input type="hidden" name="command" value="registerpage">
                     <input type="submit" value="Registrer/Login">
