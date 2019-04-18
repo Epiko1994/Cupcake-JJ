@@ -17,46 +17,6 @@
     <title>Welcome page</title>
 </head>
 <body>
-<!--
-<div class="container text-center" id="banner">
-    <img id="logo-main" src="img/cupcakebaggrund.png">
-</div>
-<div class="container" name="container">
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col text-center">
-                </br>
-                <h1>Olsker Cupcakes ApS</h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="navbar">
-
-    <nav class="navbar navbar-default">
-
-        <a href="index.jsp" class="navbar-brand" id="home_button"><img src="img/cupcakebaggrund.png" width="30" height="30"
-                                                      class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
-
-        <ul>
-
-            <li>
-
-
-            </li>
-
-            <li id="register_button">
-
-                <a href="WEB-INF/registerpage.jsp" class="nav-link">Registrer/Login</a>
-
-            </li>
-
-        </ul>
-    </nav>
-
-</div>
--->
 
 <div class="container text-center" id="banner">
     <img id="logo-main" src="img/logo.png" width="146">
@@ -82,8 +42,15 @@
                     <input type="hidden" name="command" value="registerpage">
                     <input type="submit" value="Registrer/Login">
 
+                </form>
+
+                <form>
+
+                    <input type="hidden" name="command" value="mypage">
+                    <input type="submit" value="My Page">
 
                 </form>
+
             </ul>
         </div>
     </nav>
