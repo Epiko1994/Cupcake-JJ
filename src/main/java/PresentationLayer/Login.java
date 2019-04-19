@@ -21,6 +21,7 @@ public class Login extends Command {
         String password = request.getParameter( "password" );
         User user = LogicFacade.login( email, password );
         HttpSession session = request.getSession();
+        session.setAttribute("email", email);
         session.setAttribute( "user", user );
         session.setAttribute( "role", user.getRole() );
         return user.getRole() + "page";

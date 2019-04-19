@@ -4,6 +4,7 @@
     Author     : kasper
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file = "include/header.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,57 +17,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome page</title>
 </head>
+
 <body>
-
-<div class="container text-center" id="banner">
-    <img id="logo-main" src="img/logo.png" width="146">
-</div>
-<div class="container" id="navbar">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="index.jsp" class="navbar-brand"><img src="img/cupcake.svg" width="30" height="30"
-                                                      class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a href="index.jsp" class="nav-link ">Forside</a>
-                </li>
-                <li class="nav-item">
-                    <a href="bestil" class="nav-link">Bestil</a>
-                </li>
-
-                <form name="register" id="register_button" action="FrontController" method="GET">
-
-                    <input type="hidden" name="command" value="registerpage">
-                    <input type="submit" value="Registrer/Login">
-
-                </form>
-
-                <%
-                    String userRole = (String)session.getAttribute("role");
-                    if (userRole == null) {
-                        userRole = "customer";
-                    }
-                    if (userRole.equals("admin") || userRole.equals("customer")) {
-
-                %>
-
-                <form name="MyPage" id="Mypage_button" action="FrontController" method="POST">
-
-                    <input type="hidden" name="command" value="mypage">
-                    <input type="hidden" name="role" value="<%=userRole%>">
-                    <input type="submit" value="My Page">
-
-                </form>
-
-                <% } %>
-
-            </ul>
-        </div>
-    </nav>
-</div>
 
 <div class="row">
     <div class="col-md-3 text-center">

@@ -1,11 +1,12 @@
-<%--
+<%@ page import="FunctionLayer.User" %><%--
   Created by IntelliJ IDEA.
   User: Jeppe
   Date: 05-04-2019
   Time: 10:58
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,12 +19,11 @@
 </head>
 <body>
 <div class="container text-center" id="banner">
-    <img id="logo-main" src="img/logo.png" width="146">
+    <img id="banner-main" src="img/cupcakebaggrund.png">
 </div>
 <div class="container" id="navbar">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="index.jsp" class="navbar-brand"><img src="img/cupcake.svg" width="30" height="30"
-                                                        class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
+        <a href="index.jsp" class="navbar-brand"><img id="home_button" src="img/logo.png" class="d-inline-block align-top"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,12 +33,45 @@
                     <a href="index.jsp" class="nav-link ">Forside</a>
                 </li>
                 <li class="nav-item">
-                    <a href="bestil" class="nav-link ">Bestil</a>
+                    <a href="bestil" class="nav-link">Bestil</a>
                 </li>
 
-                <a href="kurv.jsp" class="nav-link">
-                    <span class="fas fa-shopping-basket"></span>
-                </a>
+                <form name="register" id="register_button" action="FrontController" method="POST">
+
+                    <input type="hidden" name="command" value="registerpage">
+                    <input type="submit" value="Registrer/Login">
+
+                </form>
+
+                <%
+                    String userEmail = (String)session.getAttribute("email");
+                    String userRole = (String)session.getAttribute("role");
+                    if (userRole == null) {
+                        userRole = "";
+                    }
+                    if (userRole.equals("admin") || userRole.equals("customer")) {
+
+                %>
+
+                <div id="Mypage_button">
+                    <form name="MyPage" action="FrontController" method="POST">
+
+                        <input type="hidden" name="command" value="mypage">
+                        <input type="hidden" name="role" value="<%=userRole%>">
+                        <input type="submit" value="My Page">
+
+                    </form>
+                </div>
+
+
+                <p>
+
+                    <%=userEmail%>
+
+                </p>
+
+                <% } %>
+
             </ul>
         </div>
     </nav>

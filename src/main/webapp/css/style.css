@@ -1,41 +1,25 @@
     body{
-        margin: 20px;
+        margin: 10px;
+        alignment: left;
         background-color: #FFFFFF;
     }
 
-    .my-container{
-        border: 1px solid green;
-    }
-
-    .my-row{
-        border: 1px solid red;
-    }
-
-    .my-col{
-        border: 2px dotted blue; 
+    #Mypage_button {
+        float: right;
     }
 
     #kurv {
         float: right;
     }
 
-    #logo-main {
-    display: block;
-    margin: 8px auto;
-    display: inline-block;
+    #banner-main {
+        width: 1000px;
+        border-radius: 10px;
     }
 
-    #byggeknap {
-        border: none; /*rewriting standard style, it is necessary to be able to change the size*/
-        height: 20px;
-        width: 40px;
-    }
-    #banner {
-
-        height: 200px;
-        width: 1500px;
-        background-image: url("/img/cupcakebaggrund.png");
-
+    #home_button {
+        height: 30px;
+        width: 30px;
     }
 
     input {
@@ -58,15 +42,11 @@
 
 
     .navbar {
-
+        margin-top: 10px;
         height: 40px;
         width: auto;
         background-color:  #ccd1d1;
 
-    }
-
-    p {
-        font-size: 50px;
     }
 
     #container

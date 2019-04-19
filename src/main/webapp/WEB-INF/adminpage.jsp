@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file = "../include/header.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,45 +17,7 @@
     </head>
     <body>
 
-    <div class="container text-center" id="banner">
-        <img id="logo-main" src="img/logo.png" width="146">
-    </div>
-    <div class="container" id="navbar">
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a href="index.jsp" class="navbar-brand"><img src="img/cupcake.svg" width="30" height="30"
-                                                          class="d-inline-block align-top" alt="" style="opacity: 0.5"></a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a href="index.jsp" class="nav-link ">Forside</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="bestil" class="nav-link">Bestil</a>
-                    </li>
-
-                    <form name="register" id="register_button" action="FrontController" method="GET">
-
-                        <input type="hidden" name="command" value="registerpage">
-                        <input type="submit" value="Registrer/Login">
-
-                    </form>
-
-                    <form>
-
-                        <input type="hidden" name="command" value="customerpage">
-                        <input type="submit" value="My Page">
-
-                    </form>
-
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-        <h1>Hello <%=request.getParameter( "email")%> </h1>
+        <h1>Hello <%=request.getAttribute("email")%> </h1>
         You are now logged in as a EMPLOYEE of our wonderful site.
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
