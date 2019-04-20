@@ -24,7 +24,12 @@ public class Login extends Command {
         session.setAttribute("email", email);
         session.setAttribute( "user", user );
         session.setAttribute( "role", user.getRole() );
-        return user.getRole() + "page";
+        if (user.getRole().equals("admin")) {
+            return "adminpage";
+        } else {
+            return "customerpage";
+        }
+
     }
 
 }

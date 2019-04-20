@@ -6,26 +6,39 @@
 
 #navbar {
     background-color: #a9a9a9;
+    height: 40px;
+}
+
+.container {
+    width: auto;
 }
 
 nav {
     height: 40px;
     width: auto;
-    background-color: #a9a9a9;
     margin-top: 10px;
 }
 
 #home_button {
-    height: 30px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     background-color: #a9a9a9;
 }
+
+
+
 
 .nav-link {
     height: 40px;
     width: 100px;
     text-align: center;
     background-color: #a9a9a9;
+    font-size: 12px;
+}
+
+a {
+    color: black;
+    margin-left: 10px;
 }
 
 a:hover {
@@ -37,8 +50,20 @@ a:hover {
     width: 100px;
     border: none;
     background-color: #a9a9a9;
+    font-size: 12px;
+    margin-left: 10px;
 }
 
 .nav-button:hover {
     background-color: #696969;
+}
+
+#mypage_button {
+    float: right;
+}
+
+#email_show {
+    text-align: center;
+    color: black;
+    font-size: 12px;
 }

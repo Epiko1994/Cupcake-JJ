@@ -22,27 +22,31 @@
     <img id="banner-main" src="img/cupcakebaggrund.png">
 </div>
 <div class="container" id="navbar">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="index.jsp" class="navbar-brand"><img id="home_button" src="img/logo.png" class="d-inline-block align-top"></a>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a href="index.jsp" class="nav-logo"><img id="home_button" src="img/logo.png"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarMenu">
+        <!--<div class="collapse navbar-collapse" id="navbarMenu">-->
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a href="index.jsp" class="nav-link ">Forside</a>
+                    <a href="index.jsp" class="nav-link">Forside</a>
                 </li>
                 <li class="nav-item">
-                    <a href="bestil" class="nav-link">Bestil</a>
+                    <form name="bestil" id="bestil_button" action="FrontController" method="POST">
+                        <input type="hidden" name="command" value="orderpage">
+                        <input type="submit" value="Bestil" class="nav-button">
+                    </form>
                 </li>
 
-                <form name="register" id="register_button" action="FrontController" method="POST">
+                <li>
+                    <form name="register" id="register_button" action="FrontController" method="POST">
 
-                    <input type="hidden" name="command" value="registerpage">
-                    <input type="submit" value="Registrer/Login" class="nav-button">
+                        <input type="hidden" name="command" value="registerpage">
+                        <input type="submit" value="Registrer/Login" class="nav-button">
 
-                </form>
-
+                    </form>
+                </li>
                 <%
                     String userEmail = (String)session.getAttribute("email");
                     String userRole = (String)session.getAttribute("role");
@@ -53,26 +57,30 @@
 
                 %>
 
-                <div id="Mypage_button">
-                    <form name="MyPage" action="FrontController" method="POST">
 
-                        <input type="hidden" name="command" value="mypage">
-                        <input type="hidden" name="role" value="<%=userRole%>">
-                        <input type="submit" value="My Page" class="nav-button">
+                <li id="mypage_button">
+                    <div>
+                        <form name="MyPage" action="FrontController" method="POST">
 
-                    </form>
-                </div>
+                            <input type="hidden" name="command" value="mypage">
+                            <input type="hidden" name="role" value="<%=userRole%>">
+                            <input type="submit" value="My Page" class="nav-button"  >
+
+                        </form>
+                    </div>
+                </li>
 
 
-                <p>
+                <p id="email_show">
 
                     <%=userEmail%>
 
                 </p>
 
+
                 <% } %>
 
             </ul>
-        </div>
+        <!--</div>-->
     </nav>
 </div>
