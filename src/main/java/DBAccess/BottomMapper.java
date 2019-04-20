@@ -14,7 +14,7 @@ import java.util.List;
 public class BottomMapper {
 
     public static List<BottomCake> bottomCake()  throws cupcakeException {
-        List<BottomCake> bottomCakeList = new ArrayList<BottomCake>();
+        List<BottomCake> bottomCakeList = new ArrayList<>();
 
         try {
             Connection con = Connector.connection();
@@ -25,9 +25,9 @@ public class BottomMapper {
             ResultSet rs = ps.executeQuery(SQL);
             while (rs.next()) {
 
-                BottomCake bottomCake = new BottomCake(rs.getInt("top_id"),
-                        rs.getString("top_name"),
-                        rs.getInt("top_price"));
+                BottomCake bottomCake = new BottomCake(rs.getInt("bottom_id"),
+                        rs.getString("bottom_name"),
+                        rs.getInt("bottom_price"));
                 bottomCakeList.add(bottomCake);
             }
         } catch (ClassNotFoundException | SQLException ex) {
