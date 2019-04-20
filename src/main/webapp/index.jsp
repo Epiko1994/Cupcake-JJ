@@ -1,4 +1,5 @@
-<%-- 
+<%@ page import="java.util.List" %>
+<%@ page import="FunctionLayer.TopCake" %><%--
     Document   : index
     Created on : Aug 22, 2017, 2:01:06 PM
     Author     : kasper
@@ -49,6 +50,7 @@
         <select class="form-control" name="top">
             <option value="0" disabled selected>Vælg top
                     <%
+
 /*
                     List<TopCake> topList = (List<TopCake>) request.getAttribute("toplisten");
 

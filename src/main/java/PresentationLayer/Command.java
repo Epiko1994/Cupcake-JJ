@@ -16,6 +16,8 @@ abstract class Command {
         commands.put( "registerpage", new RegisterBuilder() );
         commands.put( "mypage", new MyPage() );
         commands.put( "cartpage", new Cart() );
+        commands.put("toplist", new Order() );
+        commands.put("orderpage",new OrderCupCake());
     }
 
     static Command from( HttpServletRequest request ) {
@@ -26,7 +28,7 @@ abstract class Command {
         return commands.getOrDefault(commandName, new UnknownCommand() );
     }
 
-    abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
+    abstract String execute( HttpServletRequest request, HttpServletResponse response )
             throws LoginSampleException;
 
 }

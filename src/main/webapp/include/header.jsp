@@ -33,7 +33,11 @@
                     <a href="index.jsp" class="nav-link ">Forside</a>
                 </li>
                 <li class="nav-item">
+                    <form name="bestil" id="bestil_button" action="FrontController" method="POST">
+                    <input type="hidden" name="command" value="orderpage">
+                    <input type="submit" value="Bestil">
                     <a href="bestil" class="nav-link">Bestil</a>
+                    </form>
                 </li>
 
                 <form name="register" id="register_button" action="FrontController" method="POST">
