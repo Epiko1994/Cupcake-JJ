@@ -15,6 +15,10 @@ public class Order extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
 
+  /*
+        TopCake topCake = (TopCake) TopMapper.topCake();
+
+
         try {
             List<TopCake> topCakeList = TopMapper.topCake();
             request.setAttribute("toplist",topCakeList);
@@ -27,7 +31,7 @@ public class Order extends Command {
             e.printStackTrace();
         }
 
-
+*/
         return "#";
     }
 

@@ -1,25 +1,25 @@
 package FunctionLayer;
 
 public class BottomCake {
-    private int top_id;
-    private String top_name;
-    private int top_price;
+    private int bottom_id;
+    private String bottom_name;
+    private int bottom_price;
 
-    public BottomCake(int top_id, String top_name, int top_price) {
-        this.top_id = top_id;
-        this.top_name = top_name;
-        this.top_price = top_price;
+    public BottomCake(int bottom_id, String bottom_name, int bottom_price) {
+        this.bottom_id = bottom_id;
+        this.bottom_name = bottom_name;
+        this.bottom_price = bottom_price;
     }
 
-    public int getTop_id() {
-        return top_id;
+    public int getBottom_id() {
+        return bottom_id;
     }
 
-    public String getTop_name() {
-        return top_name;
+    public String getBottom_name() {
+        return bottom_name;
     }
 
-    public int getTop_price() {
-        return top_price;
+    public int getBottom_price() {
+        return bottom_price;
     }
 }

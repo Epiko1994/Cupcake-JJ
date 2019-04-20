@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="FunctionLayer.TopCake" %><%--
+<%@ page import="FunctionLayer.TopCake" %>
+<%@ page import="FunctionLayer.BottomCake" %><%--
 <%--
   Created by IntelliJ IDEA.
   User: Jeppe
@@ -17,66 +18,49 @@
 <body>
 
 <div class="row">
-    <div class="col-md-3 text-center">
-        <label>Bund:</label>
-        <select class="form-control" name="bottom">
-            <option value="0" disabled selected>Vælg bund
-                    <%
-/*
-                    List<BundCake> bundList = (List<BundCake>) request.getAttribute("cupcake");
 
-                    for (int i = 0; i < bundList.size() ; i++) {
-                        String bundOption = "";
-
-                        String printBundID = Integer.toString(bundList.get(i).getBundID());
-                        String printBundNavn = bundList.get(i).getNavnBund()+"  "+Integer.toString(bundList.get(i).getPrisBund());
-
-                        bundOption = "<option value=\"_printBundID_\">_printBundNavn_</option>";
-                        bundOption = bundOption.replace("_printBundNavn_",printBundNavn);
-                        bundOption = bundOption.replace("_printBundID_",printBundID);
-                        out.println(bundOption);
-                    }  */
-                %>
-        </select>
-    </div>
 
     <div class="col-md-3 text-center">
         <label>Topping:</label>
         <select class="form-control" name="top">
             <option value="0" disabled selected>Vælg top
                     <%
-                    List<TopCake> topCakeList2 = (List<TopCake>) request.getAttribute("toplist");
+                    List<TopCake> topCakeList = (List<TopCake>) request.getAttribute("toplist");
 
-                    for(int i = 0; i < topCakeList2.size(); i++) {
+                    for(int i = 0; i < topCakeList.size(); i++) {
                         String  topOption = "";
-                        String printtop_id = Integer.toString(topCakeList2.get(i).getTop_id());
-                        String printtop_navn = topCakeList2.get(i).getTop_name()+"  "+Integer.toString(topCakeList2.get(i).getTop_price());
+                        String printtop_id = Integer.toString(topCakeList.get(i).getTop_id());
+                        String printtop_navn = topCakeList.get(i).getTop_name()+"  " +
+                            topCakeList.get(i).getTop_price() + " kr";
 
                         topOption = "<option value=\"printtop_id\">printtop_navn</option>";
                         topOption = topOption.replace("printtop_navn",printtop_navn);
                         topOption = topOption.replace("printtop_id",printtop_id);
                         out.println(topOption);
-
-
                     }
-/*
-                    List<TopCake> topList = (List<TopCake>) request.getAttribute("toplisten");
+                %>
+        </select>
+    </div>
 
-                    for (int i = 0; i < topList.size() ; i++) {
-                        String topOption = "";
+    <div class="col-md-3 text-center">
+        <label>Bund:</label>
+        <select class="form-control" name="bottom">
+            <option value="0" disabled selected>Vælg bund
 
-                        String printTopID = Integer.toString(topList.get(i).getTopID());
-                        String printTopNavn = topList.get(i).getNavnTop()+"  "+Integer.toString(topList.get(i).getPrisTop());
-                        //String printTopID = (String) request.getAttribute("topList.get(i).getTopID()");
-                        //String printTopNavn = (String) request.getAttribute("topList.get(i).getNavnTop()");
+                    <%
+                    List<BottomCake> bottomCakeList = (List<BottomCake>) request.getAttribute("bottomlist");
 
+                    for(int i = 0; i < bottomCakeList.size(); i++) {
+                        String  bottomOption = "";
+                        String printbottom_id = Integer.toString(bottomCakeList.get(i).getBottom_id());
+                        String printbottom_navn = bottomCakeList.get(i).getBottom_name()+"  " +
+                            bottomCakeList.get(i).getBottom_price() + " kr";
 
-                        topOption = "<option value=\"printTopID\">printTopNavn</option>";
-                        topOption = topOption.replace("printTopNavn",printTopNavn);
-                        topOption = topOption.replace("printTopID",printTopID);
-                        out.println(topOption);
-
-                    }   */
+                        bottomOption = "<option value=\"printbottom_id\">printbottom_navn</option>";
+                        bottomOption = bottomOption.replace("printbottom_navn",printbottom_navn);
+                        bottomOption = bottomOption.replace("printbottom_id",printbottom_id);
+                        out.println(bottomOption);
+                    }
                 %>
         </select>
     </div>
