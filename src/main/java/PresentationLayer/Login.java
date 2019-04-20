@@ -24,6 +24,8 @@ public class Login extends Command {
         session.setAttribute("email", email);
         session.setAttribute( "user", user );
         session.setAttribute( "role", user.getRole() );
+        session.setAttribute( "saldo",user.getSaldo() );
+        request.setAttribute( "saldo",user.getSaldo() );
         if (user.getRole().equals("admin")) {
             return "adminpage";
         } else {

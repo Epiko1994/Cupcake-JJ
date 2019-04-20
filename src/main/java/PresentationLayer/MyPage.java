@@ -17,7 +17,9 @@ public class MyPage extends Command{
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");
         String email = user.getEmail();
+        double saldo = user.getSaldo();
         request.setAttribute("email", email);
+        request.setAttribute("saldo",saldo);
         String userRole = request.getParameter("role");
         if (userRole.equals("admin")) {
             return "adminpage";
