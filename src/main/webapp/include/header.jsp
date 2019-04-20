@@ -39,7 +39,7 @@
                 <form name="register" id="register_button" action="FrontController" method="POST">
 
                     <input type="hidden" name="command" value="registerpage">
-                    <input type="submit" value="Registrer/Login">
+                    <input type="submit" value="Registrer/Login" class="nav-button">
 
                 </form>
 
@@ -58,7 +58,7 @@
 
                         <input type="hidden" name="command" value="mypage">
                         <input type="hidden" name="role" value="<%=userRole%>">
-                        <input type="submit" value="My Page">
+                        <input type="submit" value="My Page" class="nav-button">
 
                     </form>
                 </div>

@@ -1,60 +1,44 @@
-    body{
-        margin: 10px;
-        alignment: left;
-        background-color: #FFFFFF;
-    }
+#banner-main {
+    height: 250px;
+    width: 1000px;
+    border-radius: 10px;
+}
 
-    #Mypage_button {
-        float: right;
-    }
+#navbar {
+    background-color: #a9a9a9;
+}
 
-    #kurv {
-        float: right;
-    }
+nav {
+    height: 40px;
+    width: auto;
+    background-color: #a9a9a9;
+    margin-top: 10px;
+}
 
-    #banner-main {
-        width: 1000px;
-        border-radius: 10px;
-    }
+#home_button {
+    height: 30px;
+    width: 40px;
+    background-color: #a9a9a9;
+}
 
-    #home_button {
-        height: 30px;
-        width: 30px;
-    }
+.nav-link {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    background-color: #a9a9a9;
+}
 
-    input {
-        font-size: 12px;
-        height: 40px;
-        width: auto;
-        background-color: #ccd1d1;
-        border-radius: 0;
-        border: none;
-        opacity: 0.5;
-    }
+a:hover {
+    background-color: #696969;
+}
 
-    input:hover {
-        opacity: 1;
-    }
+.nav-button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: #a9a9a9;
+}
 
-    #register_button {
-
-    }
-
-
-    .navbar {
-        margin-top: 10px;
-        height: 40px;
-        width: auto;
-        background-color:  #ccd1d1;
-
-    }
-
-    #container
-
-    navbar{
-        padding: 0;
-    }
-
-    option[value=""][disabled] {
-        display: none;
-    }
+.nav-button:hover {
+    background-color: #696969;
+}
