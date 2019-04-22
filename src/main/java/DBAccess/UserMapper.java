@@ -60,15 +60,4 @@ public class UserMapper {
             throw new LoginSampleException(ex.getMessage());
         }
     }
-
-    /*public static void role() throws SQLException, ClassNotFoundException {
-        try {
-            Connection con = Connector.connection();
-            String SQL = "SELECT role FROM Cupcake.Users";
-            return role;
-        } catch(Exception e) {
-
-        }
-    }*/
-
 }

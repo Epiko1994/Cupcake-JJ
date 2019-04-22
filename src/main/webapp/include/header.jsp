@@ -64,7 +64,7 @@
 
                             <input type="hidden" name="command" value="mypage">
                             <input type="hidden" name="role" value="<%=userRole%>">
-                            <input type="submit" value="My Page" class="nav-button"  >
+                            <input type="submit" value="My Page" class="nav-button">
 
                         </form>
                     </div>
@@ -72,10 +72,15 @@
 
 
                 <p id="email_show">
-
                     <%=userEmail%>
-
                 </p>
+                <% if(userRole.equals("customer")){ %>
+                <p id="saldo_show">
+                    &emsp; <%=session.getAttribute("saldo") + " Kr"%>
+                </p>
+                <% } %>
+
+
 
 
                 <% } %>

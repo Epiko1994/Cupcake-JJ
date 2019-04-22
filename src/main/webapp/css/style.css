@@ -65,5 +65,11 @@ a:hover {
 #email_show {
     text-align: center;
     color: black;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+#saldo_show {
+    text-align: center;
+    color: black;
+    font-size: 14px;
 }
